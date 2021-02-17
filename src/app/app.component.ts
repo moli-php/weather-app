@@ -8,8 +8,7 @@ import { WeatherService } from  './services/weather.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'weather-app';
-
+  title: string = 'Weather App';
   weatherOptions: string[] = ['London','Wales','York'];
   weathers: object[] = [];
   loader: boolean = true;
@@ -18,7 +17,6 @@ export class AppComponent {
   }
 
    onSubmit(form: NgForm) {
-    
     if (form.value.weather) {
       const weather =  form.value.weather;
       this.loader = false;
